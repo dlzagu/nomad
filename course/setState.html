@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+   
+    function App() {
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+        setCounter(counter + 1); //modifier 함수가 refresh 해줌
+                                // modifier 함수로 state를 바꿀 때, 컴포넌트 전체가 재생성됨.
+        };
+        return ( 
+        <div>
+            <h3>Total Click: {counter}</h3>
+            <button onClick = {onClick}>Click me</button>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, root);
+</script>
+
+</html>
