@@ -28,6 +28,7 @@ function App() {
       <h1>Coin Changer {loading ? "" : `(${coins.length})`}</h1>
       {loading ? <strong>Loading...</strong> :
         <select onChange={selectHandle}>
+          <option>----select coin----</option>
           {coins.map((coin, index) => 
             <option
             key ={index}
@@ -48,7 +49,7 @@ function App() {
         />
       </div>
       
-      <h2>you can get {money / coinCost}</h2>   
+      <h2>you can get {money!==1?(money / coinCost):null}</h2>   
     </div>
     
 
