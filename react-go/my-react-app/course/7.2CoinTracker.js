@@ -22,7 +22,7 @@ function App() {
         setLoading(false);
       });
   }, []);
-
+  
   return (
     <div>
       <h1>Coin Changer {loading ? "" : `(${coins.length})`}</h1>
