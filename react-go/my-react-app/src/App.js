@@ -1,15 +1,27 @@
-import Button from "./Button";
-import styles from "./App.module.css";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Detail from "./routes/Detail";
+import Home from "./routes/Home";
 function App() {
-  return (
-    <div>
-      <h1 className={styles.title}>
-       welcome back!!!
-      </h1>
-    <Button text={"Continue"} />
-    </div> 
-  );
+  return <Router>
+    <Switch>
+      <Route path="/hello">
+        <h1>hello</h1>
+      </Route>
+      <Route path="/movie">
+        <Detail />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  </Router>;
 }
+
 
 
 export default App;
