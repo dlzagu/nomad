@@ -4,9 +4,16 @@ import { useState, useEffect } from "react";
 function App() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
-  const [coinValue, setCoinValue] = useState(0);
-  const [money, setMoney] = useState(0);
-
+  const [money, setMoney] = useState(1);
+  const [coinCost, setCoinCost] = useState(1);
+ 
+  const onChange = (event) => {
+    setMoney(event.target.value);
+  }
+  const selectHandle = (event) => {
+    setCoinCost(event.target.value);
+    setMoney(1);
+  }
   useEffect(() => {
     fetch("https://api.coinpaprika.com/v1/tickers")
       .then((response) => response.json())
@@ -14,38 +21,36 @@ function App() {
         setCoins(json);
         setLoading(false);
       });
-  }, [])
+  }, []);
 
-  const onChange = (event) => setMoney(event.target.value);
-  const coinChange = (event) => setCoinValue(event.target.value);
-  
   return (
     <div>
       <h1>Coin Changer {loading ? "" : `(${coins.length})`}</h1>
       {loading ? <strong>Loading...</strong> :
-        <select onChange={coinChange}>
-          <option>----Select Coin----</option>
-          {coins.map((coin) => (
-            <option>
-              {coin.name} ({coin.symbol}):{coin.quotes.USD.price}USD
+        <select onChange={selectHandle}>
+          {coins.map((coin, index) => 
+            <option
+            key ={index}
+            value={coin.quotes.USD.price}
+            id = {coin.simbol}
+            >
+              {coin.name} ({coin.symbol}):{coin.quotes.USD.price} USD
             </option>
-          ))}
+          )}
         </select>
       }
       <hr />
-
       <div>
-        <input
-          onChange={onChange}
-          type="number"
-          placeholder="How much you have?"
+      <input 
+          type= "number"
+          placeholder= "How much do you have??"
+          onChange = {onChange}
         />
       </div>
-      <h1>
-        {(money !== 0 && coinValue !== 0) ? (money / coinValue) : null}
-      </h1>
-
+      
+      <h2>you can get {money / coinCost}</h2>   
     </div>
+    
 
   );
 }
