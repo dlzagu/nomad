@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https//dlzagu.github.io/nomad.git/precache-manifest.f01b2f2526ca7b5efa0109e630f21c18.js"
+  "/nomad.git/precache-manifest.be2516be8b390c57285d0f3666b179b5.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("https//dlzagu.github.io/nomad.git/index.html", {
+workbox.routing.registerNavigationRoute("/nomad.git/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });

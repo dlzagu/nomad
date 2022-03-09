@@ -1,11 +1,11 @@
 {
-  "main.js": "https//dlzagu.github.io/nomad.git/static/js/main.31d5eecd.chunk.js",
-  "main.js.map": "https//dlzagu.github.io/nomad.git/static/js/main.31d5eecd.chunk.js.map",
-  "static/js/1.096b0eca.chunk.js": "https//dlzagu.github.io/nomad.git/static/js/1.096b0eca.chunk.js",
-  "static/js/1.096b0eca.chunk.js.map": "https//dlzagu.github.io/nomad.git/static/js/1.096b0eca.chunk.js.map",
-  "runtime~main.js": "https//dlzagu.github.io/nomad.git/static/js/runtime~main.245aee40.js",
-  "runtime~main.js.map": "https//dlzagu.github.io/nomad.git/static/js/runtime~main.245aee40.js.map",
-  "index.html": "https//dlzagu.github.io/nomad.git/index.html",
-  "precache-manifest.f01b2f2526ca7b5efa0109e630f21c18.js": "https//dlzagu.github.io/nomad.git/precache-manifest.f01b2f2526ca7b5efa0109e630f21c18.js",
-  "service-worker.js": "https//dlzagu.github.io/nomad.git/service-worker.js"
+  "main.js": "/nomad.git/static/js/main.31d5eecd.chunk.js",
+  "main.js.map": "/nomad.git/static/js/main.31d5eecd.chunk.js.map",
+  "static/js/1.096b0eca.chunk.js": "/nomad.git/static/js/1.096b0eca.chunk.js",
+  "static/js/1.096b0eca.chunk.js.map": "/nomad.git/static/js/1.096b0eca.chunk.js.map",
+  "runtime~main.js": "/nomad.git/static/js/runtime~main.c88eac57.js",
+  "runtime~main.js.map": "/nomad.git/static/js/runtime~main.c88eac57.js.map",
+  "index.html": "/nomad.git/index.html",
+  "precache-manifest.be2516be8b390c57285d0f3666b179b5.js": "/nomad.git/precache-manifest.be2516be8b390c57285d0f3666b179b5.js",
+  "service-worker.js": "/nomad.git/service-worker.js"
 }
