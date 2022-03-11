@@ -1,27 +1,32 @@
 import PropTypes from "prop-types";
 import React from 'react';
-
+import styles from "./DetailMovie.module.css";
 
 
 function DetailMovie({ coverImg, title, year, rating, runtime, description_intro, genres }) {
   return (
-    <div>
-      <img src={coverImg} alt={title} />
-      <h2>
-        {title}
-      </h2>
-      <p>year : {year}</p>
-      <p>rating : {rating}</p>
-      <p>runtime : {runtime}</p>
-      <h3>genres</h3>
-      <ul>
-        {genres.map((g) => (
-          <li key={g}>{g}</li>
-        ))}
-      </ul>
-      <h3>description_intro</h3>
-      <p>{description_intro}</p>
-     
+    <div className={styles.detailmv}>
+      <img src={coverImg} alt={title} className={styles.img} />
+      <div className={styles.tyrr}>
+        <h2 className={styles.title}>
+          {title}
+        </h2>
+        <p>year : {year}</p>
+        <p>rating : {rating}</p>
+        <p>runtime : {runtime}</p>
+        <h3>genres</h3>
+        <ul>
+          {genres.map((g) => (
+            <li key={g}>{g}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.description}>
+        <h3>description_intro</h3>
+        <p>{description_intro}</p>
+      </div>
+
+
     </div>
   );
 }
