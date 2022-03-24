@@ -1,3 +1,105 @@
 .hidden {
     display: none;
 }
+
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://cdn.pixabay.com/photo/2016/02/18/20/02/seljalandsfoss-1207958_960_720.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+body, html {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    
+}
+
+#quote{ display: flex;
+        flex-direction: column;  
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in;
+        font-style: italic;
+        font-size: 12px;
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+    }
+#weather{
+    font-style: italic;
+    font-size: 12px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.clock{
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    
+    padding: 0;
+}
+h3{ margin: 0;
+    display: block;
+    font-size: 20vh;
+    margin-bottom: 20px;
+    font-weight: 340;
+}
+.login{
+    appearance: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 6vh;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+.submit {
+    display: none;
+}
+.todo {
+    background: none;
+    appearance: none;
+    border: 0;
+    font-size: 4vh;;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.todo::placeholder {
+    color: white;
+    
+  }
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 100px;
+
+    
+}
+#todo-list li{
+    font-size: 3vh;
+    margin-bottom: 5px;
+}
+#todo-list span:nth-child(even){
+    cursor: pointer;
+    margin-left: 5px;
+}
